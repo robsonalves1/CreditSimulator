@@ -10,7 +10,7 @@ on:
 jobs:
   build-and-test:
     name: Build & Test
-    runs-on: ubuntu-latest # Um servidor Linux limpo que o GitHub nos empresta
+    runs-on: ubuntu-latest
 
     steps:
     - name: Baixar o código (Checkout)
@@ -19,7 +19,7 @@ jobs:
     - name: Configurar o ambiente (Node.js)
       uses: actions/setup-node@v4
       with:
-        node-version: '20' # Mesma versão que você utiliza no ambiente local
+        node-version: '20'
         cache: 'npm'
 
     - name: Instalar dependências
@@ -31,6 +31,4 @@ jobs:
     - name: Validar a Compilação do Projeto (Build)
       run: npm run build
       env:
-        # Passamos uma variável falsa apenas para o Prisma não dar erro de ambiente 
-        # durante a etapa de verificação do build na nuvem
         DATABASE_URL: "postgresql://dummy:dummy@localhost:5432/dummy"
