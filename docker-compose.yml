@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: sfn-postgres-unique
+    environment:
+      POSTGRES_USER: sfn_admin
+      POSTGRES_PASSWORD: sfn_password_123
+      POSTGRES_DB: credit_simulator
+    ports:
+      - "5435:5432"
+    volumes:
+      - sfn_unique_data:/var/lib/postgresql/data
+
+volumes:
+  sfn_unique_data:
