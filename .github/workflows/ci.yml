@@ -25,9 +25,6 @@ jobs:
     - name: Instalar dependências
       run: npm install
 
-    - name: Mudar de diretório
-      run: cd sfn-simulator
-
     - name: Rodar Testes Unitários do Domínio
       run: npm run test
 
