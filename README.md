@@ -1,4 +1,3 @@
-```markdown
 # Simulador de Crédito SFN (Sistema Financeiro Nacional)
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -90,4 +89,3 @@ Os testes validam:
 - **Testes:** Jest.
 - **Matemática Financeira:** Decimal.js.
 - **DevOps:** Docker, GitHub Actions (CI/CD).
-```
